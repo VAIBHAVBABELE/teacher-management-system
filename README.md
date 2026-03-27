@@ -57,6 +57,7 @@ POST /api/register
 
 ## Request Body:
 
+```http
 {
     "first_name": "John",
     "last_name": "Doe",
@@ -64,9 +65,9 @@ POST /api/register
     "password": "password123",
     "password_confirmation": "password123"
 }
-
+```
 ## Response:
-
+```http
 {
     "success": true,
     "message": "User registered successfully",
@@ -81,20 +82,20 @@ POST /api/register
         "token_type": "Bearer"
     }
 }
-
+```
 ## Login User
-
+```http
 POST /api/login
-
+```
 ## Request Body:
-
+```http
 {
     "email": "john@example.com",
     "password": "password123"
 }
-
+```
 ## Response:
-
+```http
 {
     "success": true,
     "message": "Login successful",
@@ -109,14 +110,19 @@ POST /api/login
         "token_type": "Bearer"
     }
 }
+```
 
-Protected Routes (Authentication Required)
+## Protected Routes (Authentication Required)
+```http
+
 Note: Add Authorization: Bearer {token} header to all protected routes
 
 Get User Profile
-http
+```http
 GET /api/user-profile
-Response:
+```
+## Response:
+```http
 
 json
 {
@@ -134,19 +140,25 @@ json
         }
     }
 }
-Create/Update Teacher Profile
-http
-POST /api/teacher-profile
-Request Body:
 
+```
+## Create/Update Teacher Profile
+```http
+POST /api/teacher-profile
+```
+## Request Body:
+
+```http
 json
 {
     "university_name": "Harvard University",
     "gender": "male",
     "year_joined": 2020
 }
-Response:
 
+```
+## Response:
+```http
 json
 {
     "success": true,
@@ -159,11 +171,14 @@ json
         "year_joined": 2020
     }
 }
-Get My Teacher Profile
-http
-GET /api/teacher-profile
-Response:
+```
 
+## Get My Teacher Profile
+```http
+GET /api/teacher-profile
+```
+## Response:
+```http
 json
 {
     "success": true,
@@ -175,11 +190,15 @@ json
         "year_joined": 2020
     }
 }
-Get All Teachers
-http
-GET /api/teachers
-Response:
+```
 
+## Get All Teachers
+```http
+GET /api/teachers
+
+```
+## Response:
+```http
 json
 {
     "success": true,
@@ -199,18 +218,22 @@ json
         }
     ]
 }
-Logout
-http
+```
+## Logout
+```http
 POST /api/logout
-Response:
-
+```
+## Response:
+```http
 json
 {
     "success": true,
     "message": "Logged out successfully"
 }
-📁 Project Structure
-text
+```
+# 📁 Project Structure
+
+```text
 teacher-management-system/
 │
 ├── app/
@@ -238,7 +261,12 @@ teacher-management-system/
 ├── composer.json                             # PHP dependencies
 ├── artisan                                   # Laravel CLI tool
 └── README.md                                 # Project documentation
-🚀 Installation & Setup Guide
+
+```
+
+# 🚀 Installation & Setup Guide
+
+```text
 Prerequisites
 PHP >= 8.1
 
@@ -248,23 +276,29 @@ MySQL >= 8.0
 
 Git
 
-Step 1: Clone Repository
-bash
+```
+
+## Step 1: Clone Repository
+```bash
 git clone https://github.com/your-username/teacher-management-system.git
+
+
 cd teacher-management-system
-Step 2: Install Dependencies
-bash
+
+```
+## Step 2: Install Dependencies
+```bash
 composer install
-Step 3: Environment Configuration
-bash
+```
+## Step 3: Environment Configuration
 # Copy environment file
 cp .env.example .env
 
 # Generate application key
 php artisan key:generate
-Step 4: Configure Database
+## Step 4: Configure Database
 Open .env file and update database credentials:
-
+```data
 env
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -272,26 +306,31 @@ DB_PORT=3306
 DB_DATABASE=teacher_management
 DB_USERNAME=root
 DB_PASSWORD=
-Step 5: Import Database
+
+```
+
+## Step 5: Import Database
 Option A: Using MySQL command
 
-bash
+```bash
 mysql -u root -p teacher_management < database/teacher_management.sql
 Option B: Using phpMyAdmin
 
 Create database named teacher_management
 
 Import database/teacher_management.sql file
-
-Step 6: Run Migrations (Alternative to import)
-bash
+```
+## Step 6: Run Migrations (Alternative to import)
+```bash
 php artisan migrate
 Step 7: Start Development Server
 bash
 php artisan serve
 The API will be available at: http://localhost:8000
+```
 
-🧪 Testing the API
+## 🧪 Testing the API
+```bash
 Using Postman
 Import the collection (if available)
 
@@ -335,13 +374,16 @@ XSS Protection: Automatic output escaping
 CSRF Protection: Token-based for API (optional)
 
 📦 Dependencies
+```html
 json
 {
     "php": "^8.1",
     "laravel/framework": "^10.0",
     "laravel/sanctum": "^3.0"
 }
-🤝 Contributing
+```
+## 🤝 Contributing
+```html
 Fork the repository
 
 Create feature branch (git checkout -b feature/amazing-feature)
@@ -351,8 +393,9 @@ Commit changes (git commit -m 'Add amazing feature')
 Push to branch (git push origin feature/amazing-feature)
 
 Open Pull Request
+```
 
-📝 License
+## 📝 License
 This project is open-source and available under the MIT License.
 
 📧 Contact
