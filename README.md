@@ -12,12 +12,12 @@ A RESTful API built with Laravel for managing teachers and their profiles. This 
 - **Teacher Profile Management** (Create/Update/View)
 - **List All Teachers** with their associated user data
 - **MySQL Database** with proper foreign key constraints
-[register page](images/Screenshot%202026-03-28%20211815.png)
-[login page](/images/Screenshot%202026-03-28%20211844.png)
-[dashboard](/images/Screenshot%202026-03-28%20211957.png)
-[add teacher profile](/images/Screenshot%202026-03-28%20212020.png)
-[user table](/images/Screenshot%202026-03-28%20212046.png)
-[teachers table](/images/Screenshot%202026-03-28%20212142.png)
+![register page](images/Screenshot%202026-03-28%20211815.png)
+![login page](/images/Screenshot%202026-03-28%20211844.png)
+![dashboard](/images/Screenshot%202026-03-28%20211957.png)
+![add teacher profile](/images/Screenshot%202026-03-28%20212020.png)
+![user table](/images/Screenshot%202026-03-28%20212046.png)
+![teachers table](/images/Screenshot%202026-03-28%20212142.png)
 ## 🛠️ Technology Stack
 
 | Technology | Version | Purpose |
