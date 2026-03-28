@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,4 +29,7 @@ Route::middleware('auth:sanctum')->group(function () {
     
     // Get all teachers with user data
     Route::get('/teachers', [TeacherController::class, 'index']);
+
+    // Get all users (for admin purposes)
+    Route::get('/users', [UserController::class, 'index']);
 });

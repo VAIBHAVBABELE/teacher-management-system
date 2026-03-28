@@ -17,7 +17,61 @@
 /public/hot
 /public/storage
 /storage/*.key
-/storage/pail
+/storage/pail# Dependencies
+/node_modules/
+/vendor/
+
+# Build files
+/public/build/
+/public/hot
+/public/storage
+/storage/*.key
+/storage/framework/cache/
+/storage/framework/sessions/
+/storage/framework/views/
+/storage/framework/testing/
+/storage/logs/*.log
+
+# Environment
+.env
+.env.backup
+.env.production
+.env.local
+
+# IDE
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Cache
+/bootstrap/cache/
+/.phpunit.cache/
+/.phpunit.result.cache
+composer.lock
+package-lock.json
+
+# Logs
+*.log
+npm-debug.log
+yarn-error.log
+
+# Testing
+/coverage/
+
+# Laravel specific
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+
+# React specific
+.eslintcache
 /vendor
 Homestead.json
 Homestead.yaml
@@ -86,3 +140,4 @@ composer.phar
 *.rar
 *.tar
 *.zip
+
